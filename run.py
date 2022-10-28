@@ -51,7 +51,10 @@ if __name__ == "__main__":
     CT_image_path = args.ct_path
     json_path = args.electrodes    
         
-    os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}')    
+    if not args.Fix_Manual_Crop:   
+        os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}') 
+    if not args.Fix_Manual_Crop:
+        os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -fmc')    
     os.system(f'python ct_segmentation.py -id {SUBID} -o {OUTPUT_DIR}')
 
     if not args.TI:
