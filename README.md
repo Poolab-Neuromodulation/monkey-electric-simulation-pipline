@@ -20,23 +20,35 @@ Make sure the above tools are added to the environment variables.
 ```shell
 conda env create -f environment.yml
 ```
-
 # How to use
 
-1. ac pc校正
-2. 
+1. Convert dcm files of raw CT and T1  to nii files
 
-```shell
-# 1
-python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}
+2. If CT and T1 images are not in sphinx position, do reorientation:
 
-# 2
-python ct_segmentation.py -id {SUBID} -o {OUTPUT_DIR}
+   ```shell
+   mri_convert CT.nii --sphinx CT.nii
+   mri_convert T1.nii --sphinx T1.nii
+   ```
 
-# 3
-python simu_monkey.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}
+3. ```shell
+   gzip CT.nii # nii => nii.gz
+   gzip T1.nii
+   ```
 
-# 4 all
-python run.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -e {json_path}
-```
+4. alignment to anterior and posterior commissure for CT and T1
 
+5. Set the electrode position and current level you want to stimulate, and save it as a json file.
+
+   ```json
+   {
+      "Fpz" : 1, 
+      "T1" : -1
+   }
+   ```
+
+6. run the pipeline:
+
+   ```shell
+   python run.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -e {json_path}
+   ```
