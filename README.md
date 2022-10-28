@@ -10,7 +10,6 @@ You previously need the installation of:
  - **FSL**. https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation 
  - **ANTS**. http://stnava.github.io/ANTs/
  - **MATLAB**. https://la.mathworks.com/products/get-matlab.html?s_tid=gn_getml 
- - **MINC-toolkit**. https://github.com/BIC-MNI/minc-toolkit-v2  
 
 Make sure the above tools are added to the environment variables.
 
