@@ -61,4 +61,4 @@ if __name__ == "__main__":
         os.system(f'python simu_monkey.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
 
     if args.TI:
-        os.system(f'python simu_monkey_TI.py -id {SUBID} -o {OUTPUT_DIR}')
+        os.system(f'python simu_monkey_TI.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
