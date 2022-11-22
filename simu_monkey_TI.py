@@ -9,6 +9,7 @@ def load_arguments():
     parser = argparse.ArgumentParser(description="Electric field simulation for monkeys")
     parser.add_argument("-o", "--output", help="Directory where the output file is to be saved")
     parser.add_argument("-id", "--ID", help="SUBJECT ID", type=str)
+    parser.add_argument("-e", "--electrodes", help="json file for electrodes current dictionary", type=str)
     args = parser.parse_args()
     return args
 
