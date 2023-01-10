@@ -9,7 +9,8 @@ You previously need the installation of:
  - **FREESURFER** v6.0.0.1. https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/  
  - **FSL**. https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation 
  - **ANTS**. http://stnava.github.io/ANTs/
- - **MATLAB**. https://la.mathworks.com/products/get-matlab.html?s_tid=gn_getml 
+ - **MATLAB**. https://la.mathworks.com/products/get-matlab.html?s_tid=gn_getml   
+ -- MATLAB Toolbox: roast-3.0, NIfTI_Tools_matlab
 
 Make sure the above tools are added to the environment variables.
 
