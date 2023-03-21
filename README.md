@@ -9,6 +9,7 @@ You previously need the installation of:
  - **FREESURFER** v6.0.0.1. https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/  
  - **FSL**. https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation 
  - **ANTS**. http://stnava.github.io/ANTs/
+ - **AFNI**. https://afni.nimh.nih.gov/
  - **MATLAB**. https://la.mathworks.com/products/get-matlab.html?s_tid=gn_getml   
  -- MATLAB Toolbox: spm12, iso2mesh, NIfTI_Tools_matlab
 
