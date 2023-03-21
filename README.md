@@ -10,7 +10,7 @@ You previously need the installation of:
  - **FSL**. https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation 
  - **ANTS**. http://stnava.github.io/ANTs/
  - **MATLAB**. https://la.mathworks.com/products/get-matlab.html?s_tid=gn_getml   
- -- MATLAB Toolbox: roast-3.0, NIfTI_Tools_matlab
+ -- MATLAB Toolbox: spm12, iso2mesh, NIfTI_Tools_matlab
 
 Make sure the above tools are added to the environment variables.
 
