@@ -51,14 +51,17 @@ if __name__ == "__main__":
     CT_image_path = args.ct_path
     json_path = args.electrodes    
         
+
     if not args.Fix_Manual_Crop:   
         os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}') 
     if args.Fix_Manual_Crop:
-        os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -fmc')    
-    os.system(f'python ct_segmentation.py -id {SUBID} -o {OUTPUT_DIR}')
+        os.system(f'python preprocess.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -fmc')        
+    os.system(f'python seg4msh.py -id {SUBID} -o {OUTPUT_DIR}')
+    os.system(f'python nii2msh.py -id {SUBID} -o {OUTPUT_DIR}')
+    os.system(f'simnibs_python simnibs_surface.py -id {SUBID} -o {OUTPUT_DIR}')
 
-    if not args.TI:
-        os.system(f'python simu_monkey.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
+    # if not args.TI:
+    #     os.system(f'python simu_monkey.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
 
-    if args.TI:
-        os.system(f'python simu_monkey_TI.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
+    # if args.TI:
+    #     os.system(f'python simu_monkey_TI.py -id {SUBID} -o {OUTPUT_DIR} -e {json_path}')
