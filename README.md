@@ -39,17 +39,9 @@ conda env create -f environment.yml
 
 4. alignment to anterior and posterior commissure for CT and T1
 
-5. Set the electrode position and current level you want to stimulate, and save it as a json file.
 
-   ```json
-   {
-      "Fpz" : 1, 
-      "T1" : -1
-   }
-   ```
-
-6. run the pipeline:
+5. run the pipeline:
 
    ```shell
-   python run.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR} -e {json_path}
+   python run.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}
    ```
