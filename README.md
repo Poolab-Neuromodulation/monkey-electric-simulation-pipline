@@ -46,3 +46,29 @@ conda env create -f environment.yml
    ```shell
    python run.py -t1 {T1_image_path} -ct {CT_image_path} -id {SUBID} -o {OUTPUT_DIR}
    ```
+
+# Environment Package
+链接：https://pan.baidu.com/s/186mmE3rDBHBEIrXlSzrzeg?pwd=cr91
+提取码：cr91
+
+1. install apt package
+
+   ```shell
+   sudo apt-get update
+   sudo apt-get -y install itksnap
+   sudo apt-get -y install bc binutils libgomp1 perl psmisc sudo tar tcsh unzip uuid-dev vim-common libjpeg62-dev
+   sudo bash OS_notes.linux_ubuntu_20_64_a_admin.txt 2>&1 | tee o.ubuntu_20_a.txt
+   sudo apt install cmake
+   sudo apt -y install git
+   ```
+   
+2. install anaconda
+   ```shell
+   echo -e "\nyes\n\nyes\n" | bash ./Anaconda3-2021.11-Linux-x86_64.sh 
+   source ~/.bashrc
+   ```
+
+3. install all packages except Matlab
+   ```shell
+   bash ./environment_install.sh 
+   ```
